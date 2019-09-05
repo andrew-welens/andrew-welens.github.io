@@ -9,6 +9,7 @@
 }
 
 .title {
+	text-decoration: none;
 	position: relative;
 	z-index: 999;
 	font-size: 3em;
