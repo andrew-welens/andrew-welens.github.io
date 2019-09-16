@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
         canvas.height = canvas.clientHeight;
 
         let config = {
-            SIM_RESOLUTION: 256,
+            SIM_RESOLUTION: 128,
             DYE_RESOLUTION: 512,
             DENSITY_DISSIPATION: 0.99,
             VELOCITY_DISSIPATION: 0.98,
