@@ -462,9 +462,6 @@ uniform sampler2D uDivergence;
 
 vec2 boundary (vec2 uv) {
 return uv;
-// uncomment if you use wrap or repeat texture mode
-// uv = min(max(uv, 0.0), 1.0);
-// return uv;
 }
 
 void main () {
@@ -824,9 +821,6 @@ gl_FragColor = vec4(velocity, 0.0, 1.0);
             }
         }
 
-        // setInterval(function(){
-        //     multipleSplats(1, true);
-        // },900)
         var my_dx = 0;
         var my_dy = 0;
         var my_color = generateColor();
@@ -858,11 +852,6 @@ gl_FragColor = vec4(velocity, 0.0, 1.0);
                 pointer.y = touches[i].pageY;
             }
         }, false);
-
-        // canvas.addEventListener('mousedown', () => {
-        //     pointers[0].color = generateColor();
-        // });
-        // pointers[0].color = generateColor();
 
 
         canvas.addEventListener('touchstart', e => {
@@ -898,35 +887,6 @@ gl_FragColor = vec4(velocity, 0.0, 1.0);
         });
 
         function generateColor() {
-            // let c = HSVtoRGB(0.2518, 0.9430, 0.7569);
-            // var f = Math.random(1);
-            // console.log(f);
-            // let colors = [
-            //     HSVtoRGB(0.4713, 0.4819, 0.7569),
-            //     HSVtoRGB(0.6104, 0.3776, 0.7686),
-            //     HSVtoRGB(0.0254, 0.5481, 0.9373),
-            //     HSVtoRGB(0.0608, 0.4948, 0.7608),
-            //     HSVtoRGB(0.6140, 0.0748, 0.9961),
-            // ]
-            // let first = HSVtoRGB(0.4713, 0.4819, 0.7569);
-            // let second = HSVtoRGB(0.6104, 0.3776, 0.7686);
-            // let third = HSVtoRGB(0.0254, 0.5481, 0.9373);
-            // let fourth = HSVtoRGB(0.0608, 0.4948, 0.7608);
-            // let fifth = HSVtoRGB(0.6140, 0.0748, 0.9961);
-            // let f = getRandomInt(0,4);
-
-            // let c;
-
-            // c = colors[f];
-            // let c = {
-            //     r = 100,
-            //     g = 193,
-            //     b = 177
-            //     };
-            // console.log(c);
-            // c.r *= 0.1;
-            // c.g *= 0.1;
-            // c.b *= 0.1;
             let c = HSVtoRGB(Math.random(), 1.0, 1.0);
             c.r *= 0.15;
             c.g *= 0.15;
