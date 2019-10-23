@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return textNodes;
     }
 
-    const textNodes = node(document.body);
+    const textNodes = node(document.querySelector('content'));
     const wordsInTextNodes = [];
     for (let i = 0; i < textNodes.length; i++) {
         const node = textNodes[i];
