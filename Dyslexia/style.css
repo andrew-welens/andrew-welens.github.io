@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 40px;
+    font-size: 18px;
+    max-width: 980px;
+}
+
+p {
+    margin: 0;
+}
+
+
