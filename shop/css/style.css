@@ -257,7 +257,7 @@ body {
 }
 
 footer {
-	position:fixed;
+	position: fixed;
 	bottom: 0;
 	height: 70px;
 	background-color: rgb(248, 244, 244);
