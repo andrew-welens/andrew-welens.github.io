@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wordMeta = textNodes[i][j],
                 word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length),
                 before = node.nodeValue.slice(0, wordMeta.position),
-                after = node.nodeValue.slice(wordMeta.position + wordMeta.length),
+                after = node.nodeValue.slice(wordMeta.position + wordMeta.length);
                 node.nodeValue = before + upWord(word) + after;
             }
         }
