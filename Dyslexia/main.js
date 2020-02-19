@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return textNodes;
     }
 
-    const text = getNodes(document.querySelector('.content')),
-          textNodes = [];
+    const text = getNodes(document.querySelector('.content'));
+    const textNodes = [];
     for (let i = 0; i < text.length; i++) {
-        const node = text[i],
-        words = [],
-        re = /[a-zA-Zа-яА-Я]+/g;
+        const node = text[i];
+        const words = [];
+        const re = /[a-zA-Zа-яА-Я]+/g;
         let match;
         while ((match = re.exec(node.nodeValue)) != null) {
-            const word = match[0],
-            position = match.index;
+            const word = match[0];
+            const position = match.index;
             words.push({
                 length: word.length,
                 position: position
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (Math.random() > 1 / 10) {
                     continue;
                 }
-                const wordMeta = wordsInTextNodes[i][j];
+                const wordMeta = textNodes[i][j];
                 const word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length);
                 const before = node.nodeValue.slice(0, wordMeta.position);
                 const after = node.nodeValue.slice(wordMeta.position + wordMeta.length);
-                node.nodeValue = before + messUpWord(word) + after;
+                node.nodeValue = before + upWord(word) + after;
             }
         }
     }
