@@ -43,10 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (Math.random() > 1 / 10) {
                     continue;
                 }
-                const wordMeta = textNodes[i][j],
+                const wordMeta = wordsInTextNodes[i][j],
+                wordMeta = textNodes[i][j],
                 word = node.nodeValue.slice(wordMeta.position, wordMeta.position + wordMeta.length),
                 before = node.nodeValue.slice(0, wordMeta.position),
                 after = node.nodeValue.slice(wordMeta.position + wordMeta.length);
+                node.nodeValue = before + messUpWord(word) + after;
                 node.nodeValue = before + upWord(word) + after;
             }
         }
